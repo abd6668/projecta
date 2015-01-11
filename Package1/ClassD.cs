@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Package1
+namespace Package3
 {
     public class ClassD
     {
-        private ClassA _a;
+        private InterfaceA _a;
 
-        public ClassD(ClassA a)
+        public ClassD(InterfaceA a)
         {
             _a = a;
         }

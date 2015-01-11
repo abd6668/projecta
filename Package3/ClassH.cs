@@ -6,12 +6,22 @@ using System.Threading.Tasks;
 
 namespace Package3
 {
-    public class ClassH
+    public class ClassH : InterfaceHG
     {
+        private InterfaceHG _g;
+        public ClassH(InterfaceHG g)
+        {
+            _g = g;
+        }
         public void Method2()
         {
-            ClassG g = new ClassG();
-            g.Method1();
+            //ClassG g = new ClassG();
+            _g.Method1();
+        }
+
+        public void Method1()
+        {
+            Method2();
         }
     }
 }

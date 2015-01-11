@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Package1
+namespace Package3
 {
     class ClassF
     {
-        private ClassA _a;
-
-        public ClassF()
+        private InterfaceA _a;
+       
+        public ClassF(InterfaceA a)
         {
-            _a = new ClassA();
+            _a = a;
         }
+
 
         public void Method1()
         {

@@ -7,7 +7,7 @@
     <ProjectGuid>{80C1E2F7-030B-4288-B62E-1DF0BB05280A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Package2</RootNamespace>
+    <RootNamespace>Package3</RootNamespace>
     <AssemblyName>Package2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -48,13 +48,15 @@
     <Compile Include="ClassQ.cs" />
     <Compile Include="ClassV.cs" />
     <Compile Include="ClassZ.cs" />
+    <Compile Include="IInterfaceE.cs" />
+    <Compile Include="IInterfaceP.cs" />
+    <Compile Include="InterfaceJK.cs" />
+    <Compile Include="InterfaceOT.cs" />
+    <Compile Include="InterfaceQJ.cs" />
+    <Compile Include="InterfaceVC.cs" />
+    <Compile Include="InterfaceZJ.cs" />
+    <Compile Include="InterfaceZQ.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Package1\Package1.csproj">
-      <Project>{2bb5ed6d-0793-4250-bd3d-b2a6a59a71a7}</Project>
-      <Name>Package1</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

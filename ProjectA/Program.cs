@@ -1,6 +1,5 @@
 ﻿using Ninject;
 using Package1;
-using Package2;
 using Package3;
 using System;
 using System.Collections.Generic;
@@ -16,7 +15,7 @@ namespace ProjectA
         {
             IKernel kernel = new StandardKernel(new ModuleBinding());
 
-            ClassA a = new ClassA();
+            ClassA a = new ClassA(kernel.Get<InterfaceAS>(), kernel.Get<InterfaceY>());
             a.Method1();
             a.Method2();
             a.Method3();
@@ -26,17 +25,17 @@ namespace ProjectA
             b.Method2();
             b.Method3();
 
-            ClassD d = new ClassD(a);
+            ClassD d = new ClassD(kernel.Get<InterfaceA>());
             d.Method1();
 
             ClassE e = new ClassE();
             e.Method2();
             e.Method5();
 
-            ClassH h = new ClassH();
+            ClassH h = new ClassH(kernel.Get<InterfaceHG>());
             h.Method2();
 
-            ClassJ j = new ClassJ();
+            ClassJ j = new ClassJ(kernel.Get<InterfaceJK>());
             j.Method1();
 
             ClassK k = new ClassK();
@@ -51,7 +50,7 @@ namespace ProjectA
             ClassN n = new ClassN();
             n.Method3();
 
-            ClassO o = new ClassO();
+            ClassO o = new ClassO(kernel.Get<InterfaceOT>());
             o.Method2();
 
             ClassP p = new ClassP();
@@ -59,10 +58,10 @@ namespace ProjectA
             p.Method2();
             p.Method9();
 
-            ClassL l = new ClassL(p);
+            ClassL l = new ClassL(kernel.Get<IInterfaceP>());
             l.Method1();
 
-            ClassQ q = new ClassQ();
+            ClassQ q = new ClassQ(kernel.Get<InterfaceQJ>());
             q.Method3();
 
             ClassR r = new ClassR();
@@ -73,26 +72,26 @@ namespace ProjectA
             s.Method2();
             s.Method3();
 
-            ClassT t = new ClassT(e);
+            ClassT t = new ClassT(kernel.Get<IInterfaceE>(), kernel.Get<InterfaceTX>());
             t.Method2();
 
             ClassU u = new ClassU();
             u.Mehthod1();
 
-            ClassV v = new ClassV();
+            ClassV v = new ClassV(kernel.Get<InterfaceVC>());
             v.Method2();
 
-            ClassW w = new ClassW(kernel.Get <IInterfaceSomething>());
+            ClassW w = new ClassW(kernel.Get<IInterfaceSomething>(), kernel.Get<InterfaceY>());
             w.Method2();
             w.Method3();
 
-            ClassX x = new ClassX();
+            ClassX x = new ClassX(kernel.Get<InterfaceXR>());
             x.Method1();
 
             ClassY y = new ClassY();
             y.Method2();
 
-            ClassZ z = new ClassZ();
+            ClassZ z = new ClassZ(kernel.Get<InterfaceZJ>(), kernel.Get<InterfaceZQ>());
             z.Method2();
         }
     }

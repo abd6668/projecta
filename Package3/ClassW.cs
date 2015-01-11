@@ -10,15 +10,16 @@ namespace Package3
     public class ClassW
     {
         private IInterfaceSomething _something;
-
-        public ClassW(IInterfaceSomething something)
+        private InterfaceY _y;
+        public ClassW(IInterfaceSomething something, InterfaceY y)
         {
             _something = something;
+            _y = y;
         }
 
         public int Method2()
         {
-            return new ClassY().Method2();
+            return _y.Method2();
         }
 
         public void Method3()
